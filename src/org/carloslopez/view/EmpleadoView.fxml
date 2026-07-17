@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carloslopez.controller.EmpleadoController">
+   <children>
+      <ImageView fitHeight="185.0" fitWidth="1990.0" layoutX="-567.0" layoutY="329.0">
+         <image>
+            <Image url="@../image/Bordes.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="223.0" fitWidth="2101.0" layoutX="-660.0" rotate="180.0">
+         <image>
+            <Image url="@../image/Bordes.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="334.0" fitWidth="743.0" layoutX="262.0" layoutY="56.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/PetWorldMini.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="67.0" layoutY="100.0" prefHeight="123.0" prefWidth="725.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="200.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="71.0" minHeight="0.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="82.0" minHeight="5.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Empleado" textFill="#5297ac">
+               <font>
+                  <Font name="Eras Bold ITC" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="18.0" text="Apellido Empleado" textFill="#5297ac" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Eras Bold ITC" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="48.0" text="Telefono" textFill="#5297ac" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Eras Bold ITC" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="18.0" text="Nombre Empleado" textFill="#5297ac" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Eras Bold ITC" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="367.0" layoutY="18.0" text="Cargo" textFill="#5297ac" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Eras Bold ITC" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoEmpleado" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombreEmpleado" editable="false" layoutX="446.0" layoutY="9.0" GridPane.columnIndex="3" />
+            <TextField fx:id="txtApellidoEmpleado" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtCargo" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtTelefono" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtCorreo" editable="false" layoutX="493.0" layoutY="43.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label layoutX="350.0" layoutY="48.0" text="Correo" textFill="#5297ac" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Eras Bold ITC" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label layoutX="596.0" layoutY="25.0" text="Vacunas">
+         <font>
+            <Font name="Eras Bold ITC" size="40.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmpleados" layoutX="13.0" layoutY="223.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="250.0" prefWidth="825.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpleado" prefWidth="41.0" text="Cod." />
+          <TableColumn fx:id="colNombreEmpleado" prefWidth="179.0" text="Nombre Empleado" />
+            <TableColumn fx:id="colApellidoEmpleado" prefWidth="187.0" text="Apellido Empleado" />
+            <TableColumn fx:id="colCargoEmpleado" minWidth="0.0" prefWidth="141.0" text="Cargo" />
+            <TableColumn fx:id="colTelefonoEmpleado" prefWidth="118.0" text="Telefono" />
+            <TableColumn fx:id="colCorreoEmpleado" prefWidth="158.0" text="Correo" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="29.0" stylesheets="@../resource/cliente.css">
+         <graphic>
+            <ImageView fx:id="imgNuevo" fitHeight="57.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/PerroBotonAdd.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnEditar" layoutX="96.0" layoutY="14.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="29.0" stylesheets="@../resource/cliente.css">
+         <graphic>
+            <ImageView fx:id="imgEditar" fitHeight="57.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/PerroBotonEdit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="175.0" layoutY="14.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="25.0" prefWidth="29.0" stylesheets="@../resource/cliente.css">
+         <graphic>
+            <ImageView fx:id="imgReporte" fitHeight="57.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/PerroBotonReport.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="256.0" layoutY="14.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="29.0" stylesheets="@../resource/cliente.css">
+         <graphic>
+            <ImageView fx:id="imgEliminar" fitHeight="57.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/PerroBotonRemove.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="34.0" fitWidth="42.0" layoutX="802.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/RegresoMain.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

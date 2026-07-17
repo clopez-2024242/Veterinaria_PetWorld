@@ -1,0 +1,22 @@
+/*.button-bone{
+    -fx-background-image: url('/src/org/carloslopez/image/HuesoBoton.png');
+    -fx-background-size: cover;
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}*/
+
+.button{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-text-fill: black;
+    -fx-font-family:"Eras Bold ITC";
+}
+.button:pressed{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-text-fill: black;
+    -fx-font-family:"Bookman Old Style";
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,14 @@
+# Artefactos de compilación de NetBeans/Ant — no deben ir al repo
+build/
+dist/
+
+# Configuración local del IDE (puede tener rutas de tu máquina)
+nbproject/private/
+
+# Compilados
+*.class
+*.jar
+
+# Sistema
+.DS_Store
+Thumbs.db
